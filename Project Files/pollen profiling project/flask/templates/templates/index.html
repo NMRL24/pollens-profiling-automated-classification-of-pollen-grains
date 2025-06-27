@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pollen Grain Classification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #EE82EE;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    nav a {
+      color: red;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: red;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("{{ url_for('static', filename='xbee.jpg') }}");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 145px 100px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 20px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 30px auto;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .about h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #EE82EE;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto 10px auto;
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pollen Grain Classification</h1>
+    <nav>
+      <a href="/">About</a>
+      <a href="#">Contact</a>
+      <a href="/predict">Prediction</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Pollen Grain Prediction</h2>
+      <p>
+        We assist researchers and scientists in the field of botany and plant sciences by providing an interface to upload images of pollen grains and predict their type.
+      </p>
+    </section>
+
+    <section class="about" id="about">
+      <h2>ABOUT US</h2>
+      <p><strong>Pollen's Profiling:</strong> Automated Classification Of Pollen Grains</p>
+      <p><strong>Team ID:</strong> LTVIP2025TMID45577</p>
+      <p><strong>Team Size:</strong> 4</p>
+      <p><strong>Team Leader:</strong> P.Pooja Harshitha</p>
+      <p><strong>Team Member:</strong> Navya Ramisetty</p>
+      <p><strong>Team Member:</strong> Narepalem Teja</p>
+      <p><strong>Team Member:</strong> Naragam Manikanta Raghava</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pollen Grain Classification. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
